@@ -2,15 +2,16 @@ def find_item_by_name_in_collection(name, collection)
   # Implement me first!
   #
   # Consult README for inputs and outputs
-  index = 0
+  counter = 0
 
-  collection.each do |grocery_item|
-    return grocery_item if grocery_item[:name] === name
-    index += 1
+  while counter < collection.length
+    if collection[counter][:item] == name
+      return collection[counter]
+    end
+    counter =+ 1
   end
-  nil
-
 end
+
 
 def consolidate_cart(cart)
   # Consult README for inputs and outputs
