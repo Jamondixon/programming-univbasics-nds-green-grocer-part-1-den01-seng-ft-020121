@@ -2,7 +2,12 @@ def find_item_by_name_in_collection(name, collection)
   # Implement me first!
   #
   # Consult README for inputs and outputs
-
+  collection.each do |item|
+    return item if == item[:name] == name
+    index += 1
+  end
+  nil
+  
 end
 
 def consolidate_cart(cart)
